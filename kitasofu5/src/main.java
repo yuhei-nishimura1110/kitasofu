@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class main {
 	// 1
@@ -17,7 +18,7 @@ public class main {
 
 		a = "[";
 		for (int i = 0; i < 10; i++) {
-			n[i] = n[i] * 2;
+			n[i] *= 2;
 			if (i < 9) {
 				a += (n[i] + ",");
 			} else {
@@ -37,11 +38,11 @@ public class main {
 				a += (m[i] + "]");
 			}
 		}
-		System.out.println(a);
+		System.out.println(Arrays.toString(n));
 
 		// 3
 		for (int i = 0; i < 10; i++) {
-			n[i] = n[i] / 2;
+			n[i] /= 2;
 
 		}
 		a = "奇数：";
@@ -95,21 +96,49 @@ public class main {
 		int k = 1;
 		int z = new java.util.Random().nextInt(101);
 		System.out.println(z);
-		while (z > 1) {
+		while (z > 0) {
 			if (z % 2 == 1) {
 				a = "1" + a;
-				z = z / 2;
+				z -= 1;
+				z /= 2;
 			} else {
 				a = "0" + a;
+				z /= 2;
 			}
 			k++;
 		}
 		System.out.println(a);
 		// 6
 
-		// 7
+		int kuku[][] = new int[9][9];
+		for (int i = 0; i < 9; i++) {
+			for (int j = 0; j < 9; j++) {
+				kuku[i][j] = (i + 1) * (j + 1);
+			}
+		}
+		for (int i = 0; i < 9; i++) {
+			for (int j = 0; j < 9; j++) {
+				System.out.printf("%3d", kuku[i][j]);
 
+			}
+			System.out.println();
+		}
+
+		// 7
+		int[] kk = new int[2];
+		for (int i = 0; i < 2; i++) {
+			kk[i] = new java.util.Random().nextInt(8) + 1;
+		}
+		System.out.println(Arrays.toString(kk));
+		System.out.println(kuku[kk[0] - 1][kk[1] - 1]);
 		// 8
+		int num[] = new int[10];
+		for (int i = 0; i < 9; i++) {
+			num[i] = new java.util.Random().nextInt(100);
+		}
+		Arrays.sort(num);
+		System.out.println(Arrays.toString(num));
+
 	}
 
 }
