@@ -1,4 +1,3 @@
-package kitasohutokoubou;
 
 public class main {
 

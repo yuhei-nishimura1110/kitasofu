@@ -175,7 +175,6 @@ public class main {
 		}
 		System.out.println(a);
 		// 17
-		System.out.println("l");
 		String c = "";
 		for (int m = 1; m <= 9; m++) {
 			for (int n = 1; n <= 9; n++) {
